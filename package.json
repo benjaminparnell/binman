@@ -1,0 +1,34 @@
+{
+  "name": "binman",
+  "version": "0.1.0",
+  "description": "An Alexa skill for telling you what bins to put out.",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard",
+    "preversion": "npm test",
+    "postversion": "npm run zip",
+    "zip": "zip -r binman-$(node -e \"console.log(require('./package.json').version)\").zip ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/benjaminparnell/binman.git"
+  },
+  "keywords": [
+    "alexa",
+    "echo",
+    "amazon"
+  ],
+  "author": "Ben Parnell <benjaminparnell.94@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benjaminparnell/binman/issues"
+  },
+  "homepage": "https://github.com/benjaminparnell/binman#readme",
+  "dependencies": {
+    "alexa-sdk": "^1.0.6",
+    "dateformat": "^2.0.0"
+  },
+  "devDependencies": {
+    "standard": "^8.6.0"
+  }
+}
